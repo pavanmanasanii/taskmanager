@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Link,Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import Cookie from "js-cookie"
 import './index.css'
 
@@ -55,12 +55,12 @@ class Login extends Component{
             const data = await response.json() 
             if(response.ok === true){
                 this.setState({loginapistatus: apiconstants.success,apimessage: "Login successfull",showErr: false,errMsg: ""})
-                const { status,token,user } = data;
+                const {token } = data;
                 console.log(status)
                 Cookie.set("jwt_token", token, { expires: 1 })
             }  
             else{
-                this.setState({loginapistatus: apiconstants.failure,apimessage: data.message,showErr: true,errMsg: "Invalid email or password",email: "",password: ""})
+                this.setState({loginapistatus: apiconstants.failure,showErr: true,errMsg: "Invalid email or password",email: "",password: ""})
             }
         }
         catch(e){
