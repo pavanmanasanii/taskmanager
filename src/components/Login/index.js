@@ -56,7 +56,6 @@ class Login extends Component{
             if(response.ok === true){
                 this.setState({loginapistatus: apiconstants.success,apimessage: "Login successfull",showErr: false,errMsg: ""})
                 const {token } = data;
-                console.log(status)
                 Cookie.set("jwt_token", token, { expires: 1 })
             }  
             else{
