@@ -1,0 +1,67 @@
+.taskcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Dashboard/index.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f5f7fb;
+}
+
+nav {
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.taskcontainer {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.todocontainer,
+.inprogresscontainer,
+.completedcontainer {
+  flex: 1;
+  background: #eef2ff;
+  border-radius: 12px;
+  padding: 15px;
+  min-height: 500px;
+}
+
+.todocontainer h2,
+.inprogresscontainer h2,
+.completedcontainer h2 {
+  margin-top: 0;
+}
+
+nav button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav button:first-of-type {
+  background: #2563eb;
+  color: white;
+}
+
+nav button:last-of-type {
+  background: #ef4444;
+  color: white;
+}

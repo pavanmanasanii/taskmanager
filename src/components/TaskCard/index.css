@@ -1,0 +1,51 @@
+/* TaskCard/index.css */
+
+.task-card {
+  list-style: none;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.task-card h3 {
+  margin: 10px 0;
+  color: #1e293b;
+}
+
+.task-card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.task-card select {
+  margin-top: 10px;
+}
+
+.task-card button {
+  margin-left: 10px;
+}
+
+.priority {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.high {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.low {
+  background: #dcfce7;
+  color: #16a34a;
+}
