@@ -17,7 +17,6 @@ class Login extends Component{
         password: 'user123',
         showErr: false,
         errMsg: '',
-        apimessage: ''
     }
     
     onFormsubmit = async (event) => {
@@ -54,7 +53,7 @@ class Login extends Component{
             const response = await fetch(loginUrl,options)
             const data = await response.json() 
             if(response.ok === true){
-                this.setState({loginapistatus: apiconstants.success,apimessage: "Login successfull",showErr: false,errMsg: ""})
+                this.setState({loginapistatus: apiconstants.success,showErr: false,errMsg: ""})
                 const {token } = data;
                 Cookie.set("jwt_token", token, { expires: 1 })
             }  
@@ -72,7 +71,7 @@ class Login extends Component{
     }
 
     render(){
-        const {showErr,errMsg,password,email,apimessage,loginapistatus} = this.state
+        const {showErr,errMsg,password,email,loginapistatus} = this.state
         const token = Cookie.get("jwt_token")
         if(token){
            return <Redirect to={'/'} />
